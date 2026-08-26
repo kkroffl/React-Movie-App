@@ -63,8 +63,9 @@ function Home() {
         <div className="loading">Loading...</div>
       ) : (
         <div className="movies-grid">
-          {!loading &&
-            movies.map((movie) => <MovieCard movie={movie} key={movie.id} />)}
+          {movies.map((movie) => (
+            <MovieCard movie={movie} key={movie.id} />
+          ))}
         </div>
       )}
     </div>
